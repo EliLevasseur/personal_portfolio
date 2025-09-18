@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eli Levasseur — Portfolio</title>
+  <meta name="description" content="Personal portfolio for Eli Levasseur: aspiring developer. Contact details and quick intro." />
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --accent: #2563eb;
+      --accent-2: #06b6d4;
+      --ring: rgba(37, 99, 235, .25);
+      --shadow: 0 10px 20px rgba(15, 23, 42, .06), 0 2px 6px rgba(15, 23, 42, .04);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(700px 400px at 0% -10%, rgba(37,99,235,.10), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(6,182,212,.10), transparent 55%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.7));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      box-shadow: var(--shadow);
+    }
+    .avatar {
+      width: 200px; height: 200px; border-radius: 16px; object-fit: cover;
+      border: 2px solid var(--border);
+      box-shadow: 0 6px 14px rgba(15, 23, 42, .08);
+      background: #f1f5f9;
+      margin-bottom: 16px;
+    }
+    h1 { margin: 0; font-size: clamp(1.8rem, 3vw, 2.4rem); }
+    .title { color: var(--muted); margin-top: 6px; }
+
+    .badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; justify-content: center; }
+    .badge {
+      border: 1px solid var(--border);
+      padding: 6px 12px; border-radius: 999px; font-size: .9rem; color: var(--muted);
+      background: linear-gradient(180deg, #ffffff, #f8fafc);
+      box-shadow: 0 1px 0 #fff inset, 0 1px 2px rgba(15,23,42,.06);
+    }
+
+    section { margin-top: 28px; }
+    .card {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: 1fr; }
+    @media (min-width: 760px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+
+    h2 { font-size: 1.2rem; margin: 0 0 10px; }
+    p { margin: 0; color: var(--muted); }
+    ul { margin: 8px 0 0 20px; color: var(--muted); }
+
+    .linklike { color: var(--accent); text-decoration: none; border-bottom: 1px dashed rgba(37,99,235,.35); }
+    .linklike:hover { filter: brightness(1.05); }
+
+    .cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(37,99,235,.12), rgba(6,182,212,.12));
+      color: var(--text); text-decoration: none; margin-top: 18px; font-weight: 600;
+    }
+
+    .contact { display: grid; gap: 12px; }
+    .contact a { text-decoration: none; color: var(--text); }
+    .contact .row {
+      display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid var(--border);
+      border-radius: 12px; background: linear-gradient(180deg, #ffffff, #f8fafc);
+    }
+    .small { font-size: .95rem; color: var(--muted); }
+
+    footer { margin-top: 40px; text-align: center; color: var(--muted); font-size: .95rem; }
+    .sep { opacity: .5; margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <!-- ===================== HEADER ===================== -->
+    <header>
+      <img class="avatar" src="IMG_1603.jpg" alt="Portrait of Eli Levasseur" />
+      <h1>Eli Levasseur</h1>
+      <div class="title">Aspiring Software Developer • Based in Canada</div>
+      <div class="badges" aria-label="Skills">
+        <span class="badge">HTML</span>
+        <span class="badge">CSS</span>
+        <span class="badge">Python</span>
+        <span class="badge">JavaScript</span>
+      </div>
+      <a class="cta" href="#contact">Contact Me</a>
+    </header>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="card" aria-labelledby="about-h">
+      <h2 id="about-h">About Me</h2>
+      <p>
+        I’m a beginner developer transitioning into coding. I enjoy building simple, clean web pages
+        and I’m currently learning the fundamentals (HTML, CSS, JavaScript) and exploring Python.
+        I’m seeking opportunities for internships, junior roles, or project collaborations.
+      </p>
+      <p style="margin-top:10px;">
+        Outside of coding, I enjoy technology, problem solving, and collaborating with others to create
+        useful projects. My goal is to grow into a versatile full‑stack developer capable of building
+        modern applications from front‑end to back‑end.
+      </p>
+    </section>
+
+    <!-- ===================== SKILLS / PROJECTS ===================== -->
+    <section class="grid two">
+      <div class="card" aria-labelledby="skills-h">
+        <h2 id="skills-h">Skills</h2>
+        <ul>
+          <li>Front‑end: HTML, CSS, basic JavaScript</li>
+          <li>Back‑end: Python and basic SQL</li>
+          <li>Tools: Git/GitHub, VS Code, Chrome DevTools</li>
+          <li>Currently learning: React</li>
+          <li>Soft Skills: Teamwork, adaptability, problem‑solving</li>
+        </ul>
+      </div>
+      <div class="card" aria-labelledby="projects-h">
+        <h2 id="projects-h">Projects</h2>
+        <ul>
+          <li>Personal website (this page) — responsive, accessible, single‑file.</li>
+          <li>To‑Do app — localStorage, vanilla JS.</li>
+          <li>Simple Python script — automates a small task.</li>
+          <li>Basic portfolio redesign — experimenting with layouts and styles.</li>
+        </ul>
+        <p class="small">Github: <a class="linklike" href="https://github.com/EliLevasseur"></a></p>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="card" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <div class="contact" role="list">
+        <div class="row" role="listitem">
+          <strong>Email:</strong> <a href="mailto:eliplevasseur7@gmail.com">eliplevasseur7@gmail.com</a>
+        </div>
+        <div class="row" role="listitem">
+          <strong>Phone:</strong> <a href="tel:+16047896163">+1 604 789 6163</a>
+        </div>
+        <div class="row" role="listitem">
+          <strong>Location:</strong> Canada
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="y"></span> Eli Levasseur</span>
+      <span class="sep">•</span>
+      <span><a class="linklike" href="https://github.com/GriffithASMR">GitHub</a></span>
+      <span class="sep">•</span>
+      <span><a class="linklike" href="#">LinkedIn</a></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
